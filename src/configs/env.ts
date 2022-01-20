@@ -7,7 +7,7 @@ const env = {
     url: `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_PATH}`,
     mongoDebug: false,
   },
-  logger: false,
+  logger: true,
 };
 
 export { env };
