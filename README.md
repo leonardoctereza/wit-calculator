@@ -1,4 +1,4 @@
-# ws-calculator
+# wit-calculator
 
 To run this project properly you need to have installed Nodejs and Docker.
 
