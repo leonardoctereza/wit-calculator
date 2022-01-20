@@ -1,0 +1,6 @@
+node_modules
+volumes
+logs/*
+yarn*
+package-*
+.env

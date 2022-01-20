@@ -1,0 +1,17 @@
+version: '2'
+services:
+  mongodb:
+    image: mongo
+    volumes:
+      - ./volumes/mongodata:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASS}
+    ports:
+      - '127.0.0.1:27018:27017'
+    networks:
+      - ebm
+
+networks:
+  ebm:
+    driver: bridge
