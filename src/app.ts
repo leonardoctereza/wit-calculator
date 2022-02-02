@@ -38,6 +38,6 @@ export class App {
     if (env.mongoDb.mongoDebug) {
       mongoose.set('debug', true);
     }
-    mongoose.connect(env.mongoDb.url);
+    mongoose.connect(`${env.mongoDb.url}`);
   }
 }

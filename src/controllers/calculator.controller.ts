@@ -1,12 +1,11 @@
 import express from 'express';
-import { ICalculatorService } from '../services/interfaces/ICalculatorService';
+import { ICalculatorService } from '../services/index';
 import { validatorMiddleware } from '../middlewares/validator';
 import { calculatorValidate } from '../utils/validators/calculator.validator';
 export default class CalculatorController {
   public routes = express.Router();
 
   constructor(private calculatorService: ICalculatorService) {
-    this.calculatorService = calculatorService;
     this.initializeRoutes();
   }
 

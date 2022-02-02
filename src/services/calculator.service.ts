@@ -1,6 +1,13 @@
 import { ICalculator, Calculator } from '../models/calculator.model';
 import { operations } from '../utils/enums/operations';
-import { ICalculatorService } from './interfaces/ICalculatorService';
+
+export interface ICalculatorService {
+  addition(firstValue: number, secondValue: number): Promise<ICalculator>;
+  subtraction(firstValue: number, secondValue: number): Promise<ICalculator>;
+  multiplication(firstValue: number, secondValue: number): Promise<ICalculator>;
+  division(firstValue: number, secondValue: number): Promise<ICalculator>;
+  findOperation(id: string): Promise<ICalculator | null>;
+}
 
 export class CalculatorService implements ICalculatorService {
   public addition(

@@ -20,6 +20,7 @@ const calculatorSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const Calculator = mongoose.model<ICalculator>('Calculator', calculatorSchema);
-
-export { Calculator };
+export const Calculator = mongoose.model<ICalculator>(
+  'Calculator',
+  calculatorSchema
+);
